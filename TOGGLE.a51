@@ -1,0 +1,16 @@
+
+ORG 0000H
+
+START:
+    CPL P1.2
+    ACALL DELAY
+    SJMP START
+
+DELAY:
+    MOV R7, #255
+
+LOOP1:
+    DJNZ R7, LOOP1
+    RET
+
+END
